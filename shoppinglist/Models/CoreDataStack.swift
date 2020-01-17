@@ -10,9 +10,7 @@ import Foundation
 import CoreData
 
 class CoreDataStack {
-    
     static let container: NSPersistentContainer = {
-        
         let container = NSPersistentContainer(name: "shoppinglist")
         container.loadPersistentStores() { (storeDescription, error) in
             if let error = error as NSError? {
@@ -21,6 +19,5 @@ class CoreDataStack {
         }
         return container
     }()
-    
     static var context: NSManagedObjectContext {return container.viewContext}
 }

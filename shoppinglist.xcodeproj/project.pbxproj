@@ -13,8 +13,11 @@
 		6D85CEDC23D12C59006DC06C /* shoppinglist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D85CEDA23D12C59006DC06C /* shoppinglist.xcdatamodeld */; };
 		6D85CEDE23D12C5D006DC06C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D85CEDD23D12C5D006DC06C /* Assets.xcassets */; };
 		6D85CEE123D12C5D006DC06C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D85CEDF23D12C5D006DC06C /* LaunchScreen.storyboard */; };
-		6D85CEEF23D12DAD006DC06C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D85CEEE23D12DAD006DC06C /* CoreDataStack.swift */; };
-		6D85CEF123D12DE8006DC06C /* Item+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D85CEF023D12DE8006DC06C /* Item+Convenience.swift */; };
+		6D85CEF323D131C7006DC06C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D85CEF223D131C7006DC06C /* CoreDataStack.swift */; };
+		6D85CEF723D132D1006DC06C /* Item+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D85CEF623D132D1006DC06C /* Item+Convenience.swift */; };
+		6D85CEF923D13356006DC06C /* ItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D85CEF823D13356006DC06C /* ItemController.swift */; };
+		6D85CEFB23D20AE3006DC06C /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D85CEFA23D20AE3006DC06C /* ItemTableViewCell.swift */; };
+		6D85CEFD23D20B1E006DC06C /* ShoppingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D85CEFC23D20B1E006DC06C /* ShoppingListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +29,11 @@
 		6D85CEDD23D12C5D006DC06C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D85CEE023D12C5D006DC06C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D85CEE223D12C5D006DC06C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6D85CEEE23D12DAD006DC06C /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		6D85CEF023D12DE8006DC06C /* Item+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+Convenience.swift"; sourceTree = "<group>"; };
+		6D85CEF223D131C7006DC06C /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		6D85CEF623D132D1006DC06C /* Item+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+Convenience.swift"; sourceTree = "<group>"; };
+		6D85CEF823D13356006DC06C /* ItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemController.swift; sourceTree = "<group>"; };
+		6D85CEFA23D20AE3006DC06C /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		6D85CEFC23D20B1E006DC06C /* ShoppingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +66,7 @@
 		6D85CED023D12C59006DC06C /* shoppinglist */ = {
 			isa = PBXGroup;
 			children = (
-				6D85CEEB23D12C94006DC06C /* Views */,
+				6D85CEEB23D12C94006DC06C /* CustomViews */,
 				6D85CEEA23D12C8E006DC06C /* Controllers */,
 				6D85CEE923D12C89006DC06C /* Models */,
 				6D85CEE823D12C76006DC06C /* Resources */,
@@ -85,8 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				6D85CEDA23D12C59006DC06C /* shoppinglist.xcdatamodeld */,
-				6D85CEEE23D12DAD006DC06C /* CoreDataStack.swift */,
-				6D85CEF023D12DE8006DC06C /* Item+Convenience.swift */,
+				6D85CEF223D131C7006DC06C /* CoreDataStack.swift */,
+				6D85CEF623D132D1006DC06C /* Item+Convenience.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -100,16 +106,18 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		6D85CEEB23D12C94006DC06C /* Views */ = {
+		6D85CEEB23D12C94006DC06C /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				6D85CEFA23D20AE3006DC06C /* ItemTableViewCell.swift */,
 			);
-			path = Views;
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		6D85CEEC23D12CD2006DC06C /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
+				6D85CEF823D13356006DC06C /* ItemController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -117,6 +125,7 @@
 		6D85CEED23D12CD8006DC06C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				6D85CEFC23D20B1E006DC06C /* ShoppingListTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -193,10 +202,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D85CEDC23D12C59006DC06C /* shoppinglist.xcdatamodeld in Sources */,
+				6D85CEF723D132D1006DC06C /* Item+Convenience.swift in Sources */,
 				6D85CED223D12C59006DC06C /* AppDelegate.swift in Sources */,
+				6D85CEFD23D20B1E006DC06C /* ShoppingListTableViewController.swift in Sources */,
 				6D85CED423D12C59006DC06C /* SceneDelegate.swift in Sources */,
-				6D85CEF123D12DE8006DC06C /* Item+Convenience.swift in Sources */,
-				6D85CEEF23D12DAD006DC06C /* CoreDataStack.swift in Sources */,
+				6D85CEF923D13356006DC06C /* ItemController.swift in Sources */,
+				6D85CEFB23D20AE3006DC06C /* ItemTableViewCell.swift in Sources */,
+				6D85CEF323D131C7006DC06C /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

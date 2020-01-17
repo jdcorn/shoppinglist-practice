@@ -1,5 +1,5 @@
 //
-//  shoppinglist+convenience.swift
+//  Item+Convenience.swift
 //  shoppinglist
 //
 //  Created by Jon Corn on 1/16/20.
@@ -10,10 +10,9 @@ import Foundation
 import CoreData
 
 extension Item {
-    convenience init(name: String, isPurchased: Bool, context: NSManagedObjectContext = CoreDataStack.context) {
+    convenience init(name: String, isPurchased: Bool = false, context: NSManagedObjectContext = CoreDataStack.context) {
         self.init(context: context)
         self.name = name
         self.isPurchased = isPurchased
     }
 }
-
