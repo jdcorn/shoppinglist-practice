@@ -19,7 +19,19 @@ class ShoppingListTableViewController: UITableViewController {
     
     // MARK: - Actions
     @IBAction func addButtonTapped(_ sender: Any) {
-        
+        let alert = UIAlertController(title: "Add item", message: "Please add an item to your shopping list", preferredStyle: .alert)
+        alert.addTextField(configurationHandler: nil)
+        // Create cancel button
+        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        // Create add button
+        let addButton = UIAlertAction(title: "Add", style: .default) { (_) in
+            guard let itemName = alert.textFields?[0].text, itemName != "" else { return }
+            ItemController.shared.add(name: itemName)
+        }
+        // adding them to alertcontroller
+        alert.addAction(cancelButton)
+        alert.addAction(addButton)
+        self.present(alert, animated: true)
     }
     
     // MARK: - Table view data source
