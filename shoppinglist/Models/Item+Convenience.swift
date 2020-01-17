@@ -7,4 +7,13 @@
 //
 
 import Foundation
+import CoreData
+
+extension Item {
+    convenience init(name: String, isPurchased: Bool, context: NSManagedObjectContext = CoreDataStack.context) {
+        self.init(context: context)
+        self.name = name
+        self.isPurchased = isPurchased
+    }
+}
 
