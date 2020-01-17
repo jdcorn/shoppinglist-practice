@@ -45,6 +45,7 @@ class ShoppingListTableViewController: UITableViewController {
         let item = ItemController.shared.fetchedResultsController.object(at: indexPath)
         cell.updateViews(item: item)
         cell.delegate = self
+        
         return cell
     }
 
